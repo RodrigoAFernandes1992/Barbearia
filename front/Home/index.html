@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <header>
+      <button id="logout" type="button">Sair</button>
+      <h1>Seja Bem Vindo!!!</h1>
+      <h2></h2>
+    </header>
+    <button command="show-modal" commandfor="cadastrar_cliente">
+      + de clientes
+    </button>
+    <dialog id="cadastrar_cliente">
+      <button command="close" commandfor="cadastrar_cliente">
+        X de clientes
+      </button>
+      <form id="cad_cliente">
+        <input type="text" id="nome_cliente" placeholder="Insiro o nome" />
+        <input type="text" id="cpf_cliente" placeholder="CPF" />
+        <button id="enviar_cliente">Cadastrar Cliente</button>
+      </form>
+    </dialog>
+
+    <button command="show-modal" commandfor="cadastrar_servico">
+      + de servicos
+    </button>
+    <dialog id="cadastrar_servico">
+      <button command="close" commandfor="cadastrar_servico">
+        X de servicos
+      </button>
+      <form id="cad_servico">
+        <input
+          type="text"
+          id="nome_servico"
+          placeholder="Insiro o nome do serviço"
+        />
+        <input type="number" id="valor_servico" placeholder="preço" />
+        <button id="enviar_servico">Cadastrar servico</button>
+      </form>
+    </dialog>
+
+    <button command="show-modal" commandfor="cadastrar_agendamento">
+      + de agendamentos
+    </button>
+    <dialog id="cadastrar_agendamento">
+      <button command="close" commandfor="cadastrar_agendamento">
+        X de agendamentos
+      </button>
+      <form id="cad_agendamento">
+        <input
+          id="data_agendamento"
+          type="datetime-local"
+          name="party-date"
+          min="2026-11-01T08:30"
+          max="2026-11-30T16:30"
+        />
+        <select name="" id="id_servico"></select>
+        <select name="" id="id_cliente"></select>
+        <button id="enviar_agendamento">Cadastrar agendamento</button>
+      </form>
+    </dialog>
+    <div>
+      <input type="text" id="procurar">
+      <button id="buscar" type="button">🔎</button>
+    </div>
+    <div id="vazia"></div>
+    <script src="./script.js"></script>
+  </body>
+</html>
